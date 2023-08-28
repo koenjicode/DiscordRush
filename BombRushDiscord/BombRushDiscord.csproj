@@ -75,6 +75,8 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>mkdir "C:\Users\Koenji\AppData\Roaming\r2modmanPlus-local\BombRushCyberfunk\profiles\Testing\BepInEx\plugins\$(TargetName)"
-xcopy /q/y/i "$(TargetPath)" "C:\Users\Koenji\AppData\Roaming\r2modmanPlus-local\BombRushCyberfunk\profiles\Testing\BepInEx\plugins\$(TargetName)" /E /H /C</PostBuildEvent>
+xcopy /q/y/i "$(TargetPath)" "C:\Users\Koenji\AppData\Roaming\r2modmanPlus-local\BombRushCyberfunk\profiles\Testing\BepInEx\plugins\$(TargetName)" /E /H /C
+mkdir "C:\Users\Koenji\Documents\Github\BombRushDiscord\Releases\plugins\$(TargetName)"
+xcopy /q/y/i "$(TargetPath)" "C:\Users\Koenji\Documents\Github\BombRushDiscord\Releases\plugins\$(TargetName)" /E /H /C</PostBuildEvent>
   </PropertyGroup>
 </Project>
