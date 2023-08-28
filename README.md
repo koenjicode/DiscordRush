@@ -1,5 +1,5 @@
 # BombRushDiscord
-Download: [Thunderstore](https://thunderstore.io/c/bomb-rush-cyberfunk/p/Koenji/BombRushDiscord/) - [Github](https://thunderstore.io/c/bomb-rush-cyberfunk/p/Koenji/BombRushDiscord/)
+Download: [Thunderstore](https://thunderstore.io/c/bomb-rush-cyberfunk/p/Koenji/BombRushDiscord/) - [Github](https://github.com/koenjicode/BombRushDiscord/releases)
 
 ## Presentation
 
@@ -21,7 +21,7 @@ For the case of Bomb Rush Cyberfunk it will tell other players on Discord what y
 
 For installation, it's highly recommended that you install the plugin through [Thunderstore](https://thunderstore.io/c/bomb-rush-cyberfunk/p/Koenji/BombRushDiscord/).
 
-If not, the newest release of BombRushDiscord can be installed or compiled on Github.
+If not, the newest release of BombRushDiscord can be installed or compiled on [Github](https://github.com/koenjicode/BombRushDiscord/releases).
 
 ## Building the Plugin
 
