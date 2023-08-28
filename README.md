@@ -1,14 +1,14 @@
 ![BombRushDiscord](/.github/IMAGES/icon.png?raw=true "Bomb Rush Discord")
 
-![English Text From BombRushDiscord](/.github/IMAGES/image1.png?raw=true)
-
-Download: [Thunderstore](https://thunderstore.io/c/bomb-rush-cyberfunk/p/Koenji/BombRushDiscord/) - [Github](https://github.com/koenjicode/BombRushDiscord/releases)
+**Download:** [Thunderstore](https://thunderstore.io/c/bomb-rush-cyberfunk/p/Koenji/BombRushDiscord/) - [Github](https://github.com/koenjicode/BombRushDiscord/releases)
 
 ## Presentation
 
-BombRushDiscord provides Discord Rich Presence support to Bomb Rush Cyberfunk.
+![English Text From BombRushDiscord](/.github/IMAGES/image1.png?raw=true)
 
-What is Discord Rich Presence? Discord Rich Presence provides context-based information related to an application.
+BombRushDiscord provides **Discord Rich Presence** support to **Bomb Rush Cyberfunk**.
+
+What is **Discord Rich Presence**? Discord Rich Presence provides context-based information related to an application.
 
 For the case of Bomb Rush Cyberfunk it will tell other players on Discord what you're doing along with other things.
 
@@ -28,7 +28,7 @@ If not, the newest release of BombRushDiscord can be installed or compiled on [G
 
 ## Building the Plugin
 
-If you're building the project from Github, you'll need to provide the Discord Game SDK files. This currently uses the latest version at the time v.3.2.1
+If you're building the project from Github, you'll need to provide the **Discord Game SDK** files. This currently uses the latest version at the time **v.3.2.1**
 
 You can download the latest version of the SDK files from [Discord's Development Portal](https://discord.com/developers/docs/game-sdk/sdk-starter-guide).
 
