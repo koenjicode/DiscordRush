@@ -1,26 +1,24 @@
 ﻿using HarmonyLib;
 using Reptile;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityControls = UnityEngine.Windows;
-using Logger = BepInEx.Logging.Logger;
 using System.Linq;
 using BombRushDiscord.Utils;
-
-enum MainState
-{
-    MAIN_MENU,
-    IN_GAME,
-}
 
 namespace BombRushDiscord.MonoBehaviours
 {
     // TODO Review this file and update to your own requirements, or remove it altogether if not required
     /// <summary>
-    /// Template MonoBehaviour class. Use this to add new functionality and behaviours to
+    /// Template MonoBehaviour class. Use this to add new functionality and behaviors to
     /// the game.
     /// </summary>
     /// 
+
+    enum BRDPresenceBehaviour
+    {
+        None,
+        Chapter,
+        HiScore,
+    }
 
     internal class BombRushDiscordComponent : MonoBehaviour
     {
@@ -48,18 +46,16 @@ namespace BombRushDiscord.MonoBehaviours
         private Core core;
         private WorldHandler world;
 
-        Dictionary<string, string> gameStages;
         Reptile.Stage currentStage;
-
-        MainState mainState;
 
         public Discord.Discord mDiscord;
 
+
+        // Special Names and Maps are just used for things we want to apply a picture to.
         // BEL, RISE, TRYCE, VINYL
-        /// <summary>
-        /// Anything that is considered a special name will show a custom icon for the character if icons are enabled.
-        /// </summary>
         string[] specialNames = new string[] { "spacegirl", "puffergirl" , "blockguy" , "girl1" };
+
+        string[] specialMaps = new string[] { "hideout", "osaka", "downhill", "square", "tower", "mall", "pyramid" };
 
         /// <summary>
         /// Unity Awake method.
@@ -161,7 +157,16 @@ namespace BombRushDiscord.MonoBehaviours
                 currentStage = Utility.GetCurrentStage();
                 var currentObjective = Reptile.Story.GetCurrentObjectiveInfo();
 
-                largeImage = "main";
+                var stageCodeName = currentStage.ToString().ToLower();
+                if (specialMaps.Contains(stageCodeName))
+                {
+                    largeImage = stageCodeName;
+                }
+                else
+                {
+                    largeImage = "main";
+                }
+                
 
                 // If the character has a special name entry we use the appropriate icon for them.
                 var character = core.SaveManager.CurrentSaveSlot.currentCharacter;
