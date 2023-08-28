@@ -10,7 +10,9 @@ BombRushDiscord provides **Discord Rich Presence** support to **Bomb Rush Cyberf
 
 What is **Discord Rich Presence**? Discord Rich Presence provides context-based information related to an application.
 
-For the case of Bomb Rush Cyberfunk it will tell other players on Discord what you're doing along with other things.
+For the case of Bomb Rush Cyberfunk it will tell other players on Discord what you're doing along with other things!
+
+**NOTICE:** One of the features of this plugin is displaying the mission objectives text. Chapters 4 and 5 will have these censored with "???" to avoid spoilers.
 
 ## Features
 
