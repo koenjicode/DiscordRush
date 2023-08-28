@@ -1,0 +1,3 @@
+[submodule "SlopCrew"]
+	path = SlopCrew
+	url = https://github.com/NotNite/SlopCrew.git
