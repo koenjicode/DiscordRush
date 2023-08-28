@@ -40,3 +40,5 @@ Additionally you'll need the following References from Bomb Rush Cyberfunk:
 * BepInEx
 * UnityEngine
 * UnityEngine.CoreModule
+
+Don't forget after compiling to supply **discord_game_sdk.dll** from lib\x86_64.
