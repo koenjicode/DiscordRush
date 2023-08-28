@@ -24,7 +24,7 @@ namespace BombRushDiscord
         // 1.0.0
         private const string MyGUID = "com.Koenji.BombRushDiscord";
         private const string PluginName = "BombRushDiscord";
-        private const string VersionString = "1.0.0";
+        private const string VersionString = "1.1.0";
 
         // Config entry key strings
         // These will appear in the config file created by BepInEx and can also be used
