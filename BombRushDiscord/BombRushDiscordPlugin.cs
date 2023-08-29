@@ -2,11 +2,9 @@
 using BepInEx.Configuration;
 using BepInEx.Logging;
 using BombRushDiscord.MonoBehaviours;
-using BombRushDiscord.Utils;
 using HarmonyLib;
-using HarmonyLib.Tools;
 using Reptile;
-using System;
+using SlopCrew.API;
 using UnityEngine;
 
 namespace BombRushDiscord
@@ -24,7 +22,7 @@ namespace BombRushDiscord
         // 1.0.0
         private const string MyGUID = "com.Koenji.BombRushDiscord";
         private const string PluginName = "BombRushDiscord";
-        private const string VersionString = "1.1.0";
+        private const string VersionString = "1.2.0";
 
         // Config entry key strings
         // These will appear in the config file created by BepInEx and can also be used
@@ -43,6 +41,8 @@ namespace BombRushDiscord
         private GameObject _modObject;
         private BombRushDiscordComponent _modDiscordComponent;
 
+        public static ISlopCrewAPI slopCrew;
+
         /// <summary>
         /// Initialise the configuration settings and patch methods
         /// </summary>
@@ -52,6 +52,8 @@ namespace BombRushDiscord
             // TODO Change this code or remove the code if not required.
             DisplayMissionObjective = Config.Bind("General", DisplayMissionObjectiveKey, true);
             PrintDiscordInfo = Config.Bind("General", PrintDiscordInfoKey, new KeyboardShortcut(KeyCode.F3));
+
+            SlopCrew.API.APIManager.OnAPIRegistered += SlopCrewRegistered;
 
             Harmony.PatchAll();
 
@@ -69,10 +71,16 @@ namespace BombRushDiscord
             // BombRushDiscordPlugin.Log.LogDebug("Debug Message to BepInEx log file");
             Log = Logger;
 
-            // Creates new GameObject and adds the Discord Component. Is this even neccessary? Probably not, i don't really use Unity!
+            // Creates new GameObject and adds the Discord Component. Is this even necessary? Probably not, i don't really use Unity!
             _modObject = new GameObject();
             _modObject.name = PluginName;
             _modDiscordComponent = _modObject.AddComponent<BombRushDiscordComponent>();
+        }
+
+        private void SlopCrewRegistered(SlopCrew.API.ISlopCrewAPI obj)
+        {
+            slopCrew = obj;
+            Logger.LogMessage("SlopCrew API registered.");
         }
 
         public void Start()
@@ -116,6 +124,13 @@ namespace BombRushDiscord
 
                 var character = Core.Instance.SaveManager.CurrentSaveSlot.currentCharacter;
                 Logger.LogInfo(string.Format("Current Character: {0} || ID: {1}", Core.Instance.Localizer.GetCharacterName(character), character.ToString().ToLower()));
+
+                if (slopCrew != null)
+                {
+                    Logger.LogInfo(string.Format("Connected To SlopCrew: {0}", slopCrew.PlayerCount > 1));
+
+                    Logger.LogInfo(string.Format("Sloppers Connected: {0}", slopCrew.PlayerCount));
+                }
             }
         }
 

@@ -3,6 +3,7 @@ using Reptile;
 using UnityEngine;
 using System.Linq;
 using BombRushDiscord.Utils;
+using SlopCrew.API;
 
 namespace BombRushDiscord.MonoBehaviours
 {
@@ -138,7 +139,7 @@ namespace BombRushDiscord.MonoBehaviours
             DiscordUpdateStatus();
         }
 
-
+        
         /// <summary>
         /// Updates the information, preparing it to be sent to discord clients.
         /// </summary>
@@ -153,6 +154,9 @@ namespace BombRushDiscord.MonoBehaviours
             // If world is valid we are in a level.
             if (world != null )
             {
+
+                bool isSlopNetworked = BombRushDiscordPlugin.slopCrew != null && BombRushDiscordPlugin.slopCrew.PlayerCount > 1;
+
                 // We use the current objective to retrieve the Chapter.
                 currentStage = Utility.GetCurrentStage();
                 var currentObjective = Reptile.Story.GetCurrentObjectiveInfo();
@@ -196,7 +200,7 @@ namespace BombRushDiscord.MonoBehaviours
                     // Update this with Pause menu Text instead.
                     details = string.Format("{0} {1} : {2}", core.Localizer.GetUserInterfaceText("SAVESLOT_CHAPTER"), (int)currentObjective.chapter, core.Localizer.GetUserInterfaceText("PAUSE_HEADER"));
                 }
-                // We're not pause but in-game.
+                // We're not paused but in-game.
                 else
                 {
                     
@@ -211,7 +215,21 @@ namespace BombRushDiscord.MonoBehaviours
                         }
                         else
                         {
-                            objectiveText = core.Localizer.GetObjectiveText(currentObjective.id);
+                            // If we're on the post-game chapter and networked, showing that we're slopping.
+                            if (isSlopNetworked && (int)currentObjective.chapter == 6)
+                            {
+                                objectiveText = "Slop Crew";
+                                // For for aesthetic purposes
+                                if (Application.systemLanguage == SystemLanguage.Japanese)
+                                {
+                                    objectiveText = objectiveText.ToUpper();
+                                }
+                            }
+                            else
+                            {
+                                objectiveText = core.Localizer.GetObjectiveText(currentObjective.id);
+                            }
+                            
                         }
 
                         details = string.Format("{0} {1} : {2}", core.Localizer.GetUserInterfaceText("SAVESLOT_CHAPTER"), (int)currentObjective.chapter, objectiveText);
@@ -224,11 +242,16 @@ namespace BombRushDiscord.MonoBehaviours
                     
                 }
 
-                // For SlopCrew API at a later date.
-                if (ModUtils.IsSlopMultiplayer())
+                // If we're connected to a network, then we update the player count.
+                if (isSlopNetworked)
                 {
-                    // currentPartySize = SlopCrew.Plugin.Plugin.PlayerCount;
-                    // maxPartySize = 1000;
+                    currentPartySize = BombRushDiscordPlugin.slopCrew.PlayerCount;
+                    maxPartySize = 256;
+                }
+                else
+                {
+                    currentPartySize = 0;
+                    maxPartySize = 0;
                 }
             }
             else
