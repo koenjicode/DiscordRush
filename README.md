@@ -2,6 +2,8 @@
 
 **Download:** [Thunderstore](https://thunderstore.io/c/bomb-rush-cyberfunk/p/Koenji/BombRushDiscord/) - [Github](https://github.com/koenjicode/BombRushDiscord/releases)
 
+_To track the updates check here:_ [Update Log](https://github.com/koenjicode/BombRushDiscord/blob/main/UPDATE.md)
+
 ## Presentation
 
 ![English Text From BombRushDiscord](/.github/IMAGES/image1.png?raw=true)
