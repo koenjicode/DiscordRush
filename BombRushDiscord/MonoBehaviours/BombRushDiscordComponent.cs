@@ -220,6 +220,7 @@ namespace BombRushDiscord.MonoBehaviours
                             {
                                 objectiveText = "Slop Crew";
                                 // For for aesthetic purposes
+                                // Todo: Not working, find correct call for this.
                                 if (Application.systemLanguage == SystemLanguage.Japanese)
                                 {
                                     objectiveText = objectiveText.ToUpper();
