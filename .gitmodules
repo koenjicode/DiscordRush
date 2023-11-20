@@ -1,3 +1,6 @@
-[submodule "SlopCrew"]
-	path = SlopCrew
-	url = https://github.com/NotNite/SlopCrew.git
+[submodule "Libraries/SlopCrew"]
+	path = Libraries/SlopCrew
+	url = https://github.com/SlopCrew/SlopCrew.git
+[submodule "Libraries/CrewBoomAPI"]
+	path = Libraries/CrewBoomAPI
+	url = https://github.com/SGiygas/CrewBoomAPI
