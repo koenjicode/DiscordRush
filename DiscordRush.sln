@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BombRushDiscord", "BombRushDiscord\BombRushDiscord.csproj", "{C256A7A6-BDE6-46DD-B10A-C72F53BCC56D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiscordRush", "DiscordRush.csproj", "{09463922-6C67-4D0E-A155-8216FCFCA668}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C256A7A6-BDE6-46DD-B10A-C72F53BCC56D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C256A7A6-BDE6-46DD-B10A-C72F53BCC56D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C256A7A6-BDE6-46DD-B10A-C72F53BCC56D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C256A7A6-BDE6-46DD-B10A-C72F53BCC56D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09463922-6C67-4D0E-A155-8216FCFCA668}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09463922-6C67-4D0E-A155-8216FCFCA668}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09463922-6C67-4D0E-A155-8216FCFCA668}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09463922-6C67-4D0E-A155-8216FCFCA668}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A1FB4919-5915-445E-B220-F8F156ADCA90}
+		SolutionGuid = {5EC177C7-E6CD-42A7-A76A-84577EE877CD}
 	EndGlobalSection
 EndGlobal

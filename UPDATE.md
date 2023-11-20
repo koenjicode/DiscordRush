@@ -1,4 +1,10 @@
-## v1.2.0 (Latest Update)
+## v2.0.0
+* Code Rewrite
+* Plugin Rebrand
+* Implemented Support for Newest version of SlopCrew.
+* Added Support for CrewBoom
+
+## v1.2.0
 * Adds stage icons for the main boroughs.
 * Implements SlopCrew Multiplayer info from the SlopCrew API (Thanks SlopCrew Team!)
 

@@ -3,3 +3,5 @@ BombRushDiscord/bin/
 BombRushDiscord/Plugins/DiscordGameSDK/
 Releases/
 .vs/
+bin/
+obj/
