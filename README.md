@@ -1,3 +1,5 @@
+![DiscordRush](/.github/IMAGES/icon.png?raw=true "Bomb Rush Discord")
+
 **Download:** [Thunderstore](https://thunderstore.io/c/bomb-rush-cyberfunk/p/Koenji/DiscordRush/) - [Github](https://github.com/koenjicode/DiscordRush/releases)
 
 _To track the updates check here:_ [Update Log](https://github.com/koenjicode/DiscordRush/blob/main/UPDATE.md)
@@ -13,6 +15,8 @@ What is **Discord Rich Presence**? Discord Rich Presence provides context-based 
 For the case of Bomb Rush Cyberfunk it will tell other players on Discord what you're doing along with other things.
 
 ## Features
+
+![English Text From DiscordRush](/.github/IMAGES/image1.png?raw=true)
 
 * Adjustable options provided by BepInEx, allowing mission objectives flavor text to be toggled on and off.
 
