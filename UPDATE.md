@@ -1,8 +1,8 @@
 ## v2.0.0
 * Code Rewrite
-* Plugin Rebrand
+* Changed Icon
 * Implemented Support for Newest version of SlopCrew.
-* Added Support for CrewBoom
+* Added Support for CrewBoom Characters.
 
 ## v1.2.0
 * Adds stage icons for the main boroughs.

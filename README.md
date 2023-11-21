@@ -1,20 +1,16 @@
-![BombRushDiscord](/.github/IMAGES/icon.png?raw=true "Bomb Rush Discord")
+**Download:** [Thunderstore](https://thunderstore.io/c/bomb-rush-cyberfunk/p/Koenji/DiscordRush/) - [Github](https://github.com/koenjicode/DiscordRush/releases)
 
-**Download:** [Thunderstore](https://thunderstore.io/c/bomb-rush-cyberfunk/p/Koenji/BombRushDiscord/) - [Github](https://github.com/koenjicode/BombRushDiscord/releases)
+_To track the updates check here:_ [Update Log](https://github.com/koenjicode/DiscordRush/blob/main/UPDATE.md)
 
-_To track the updates check here:_ [Update Log](https://github.com/koenjicode/BombRushDiscord/blob/main/UPDATE.md)
+_Alternatively, it can be checked in the zip folder if manually downloaded._
 
 ## Presentation
 
-![English Text From BombRushDiscord](/.github/IMAGES/image1.png?raw=true)
-
-BombRushDiscord provides **Discord Rich Presence** support to **Bomb Rush Cyberfunk**.
+DiscordRush (Also known as Bomb Rush Discord 2.0) provides **Discord Rich Presence** support to **Bomb Rush Cyberfunk**.
 
 What is **Discord Rich Presence**? Discord Rich Presence provides context-based information related to an application.
 
-For the case of Bomb Rush Cyberfunk it will tell other players on Discord what you're doing along with other things!
-
-**NOTICE:** One of the features of this plugin is displaying the mission objectives text. Chapters 4 and 5 will have these censored with "???" to avoid spoilers.
+For the case of Bomb Rush Cyberfunk it will tell other players on Discord what you're doing along with other things.
 
 ## Features
 
@@ -26,23 +22,13 @@ For the case of Bomb Rush Cyberfunk it will tell other players on Discord what y
 
 ## Installation
 
-For installation, it's highly recommended that you install the plugin through [Thunderstore](https://thunderstore.io/c/bomb-rush-cyberfunk/p/Koenji/BombRushDiscord/).
+For installation, it's highly recommended that you install the plugin through [Thunderstore](https://thunderstore.io/c/bomb-rush-cyberfunk/p/Koenji/DiscordRush/). 
+The latest version will always be available there.
 
-If not, the newest release of BombRushDiscord can be installed or compiled on [Github](https://github.com/koenjicode/BombRushDiscord/releases).
+If not, a mirror of the newest release of DiscordRush can be installed or compiled on [Github](https://github.com/koenjicode/DiscordRush/releases).
 
 ## Building the Plugin
 
-If you're building the project from Github, you'll need to provide the **Discord Game SDK** files. This currently uses the latest version at the time **v.3.2.1**
+If you're building the project from Github, you'll need a reference for the following dll:
 
-You can download the latest version of the SDK files from [Discord's Development Portal](https://discord.com/developers/docs/game-sdk/sdk-starter-guide).
-
-Additionally you'll need the following References from Bomb Rush Cyberfunk:
-
-* 0Harmony
 * Assembly-CSharp
-* Assembly-CSharp-firstpass
-* BepInEx
-* UnityEngine
-* UnityEngine.CoreModule
-
-Don't forget after compiling to supply **discord_game_sdk.dll** from lib\x86_64.
