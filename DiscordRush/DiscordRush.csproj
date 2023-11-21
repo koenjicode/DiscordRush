@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFramework>net462</TargetFramework>
     <AssemblyName>DiscordRush</AssemblyName>
-    <Description>My first plugin</Description>
-    <Version>1.0.0</Version>
+    <Description>Rewrite of Discord Rich Presence</Description>
+    <Version>2.0.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
@@ -21,6 +21,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Libraries\CrewBoomAPI\CrewBoomAPI.csproj" />
+    <ProjectReference Include="..\Libraries\SlopCrew\SlopCrew.API\SlopCrew.API.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
   <Publicize Include="Assembly-CSharp" />
   </ItemGroup>
 
@@ -30,13 +35,7 @@
 
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>lib\Assembly-CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="CrewBoomAPI">
-      <HintPath>lib\CrewBoomAPI.dll</HintPath>
-    </Reference>
-    <Reference Include="SlopCrew.API">
-      <HintPath>lib\SlopCrew.API.dll</HintPath>
+      <HintPath>D:\SteamLibrary\steamapps\common\BombRushCyberfunk\Bomb Rush Cyberfunk_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
   </ItemGroup>
 
